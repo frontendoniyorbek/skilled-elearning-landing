@@ -65,10 +65,6 @@ body{
     font-family:"Plus Jakarta Sans", "Arial",sans-serif;
     background-color: #fff;
     color: var(--text-color);
-    background-image: url(../img/main-bg.svg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: contain;
 }
 
 img{
@@ -105,8 +101,6 @@ img{
 
 /* MAIN-CONTENT */
 .main-content{
-    position: relative;
-    padding-top: 148px;
     flex-grow: 1;
 }
 
@@ -145,16 +139,13 @@ img{
 
 /* HERO */
 .hero {
-    margin-bottom: 110px;
-}
-
-.hero__container {
-    display: flex;
+    position: relative;
+    padding-top: 148px;
+    padding-bottom: 228px;
 }
 
 .hero__info {
     max-width: 457px;
-    margin-right: 282px;
 }
 
 .hero__heading {
@@ -173,6 +164,7 @@ img{
 }
 
 .hero__link {
+    display: inline-block;
     padding: 19px 32px 16px;
     margin: 0;
     text-decoration: none;
@@ -191,31 +183,41 @@ img{
 }
 
 .hero__img {
-    margin-top: -85px;
+    position: absolute;
+    top: 63px;
+    left: 739px;
     width: 317px;
     height: 560px;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.hero__img-bg {
+    position: absolute;
+    z-index: -1;
+    top: -186px;
+    left: 740px;
+}
+
+.card-1 {
+    position: absolute;
+    top: 405px;
+    left: 619px;
+    padding: 20px 72px 20px 24px;
+    background-color: #fff;
+    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    border-radius: 15px;
 }
 
 .card-2 {
     position: absolute;
     top: 166px;
-    right: 101px;
+    left: 1019px;
     padding: 20px 57px 20px 24px;
     background-color: #fff;
     box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
     border-radius: 15px;
 }
 
-.card-1 {
-    position: absolute;
-    top: 405px;
-    right: 457px;
-    padding: 20px 72px 20px 24px;
-    background-color: #fff;
-    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
-    border-radius: 15px;
-}
 
 .card__text {
     margin-top: 0;
@@ -382,9 +384,13 @@ img{
 .site-footer__button {
     text-decoration: none;
     background-image: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
-    transition: background-image .3s ease;
+    transition: background-image .3s ease, opacity .3s ease;
 }
 
 .site-footer__button:hover {
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+.site-footer__button:active {
+    opacity: 0.6;
 }
