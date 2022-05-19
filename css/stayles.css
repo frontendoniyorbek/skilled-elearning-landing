@@ -59,6 +59,10 @@ body{
     font-family:"Plus Jakarta Sans", "Arial",sans-serif;
     background-color: #fff;
     color: var(--text-color);
+    background-image: url(../img/main-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
 }
 
 img{
@@ -95,6 +99,9 @@ img{
 
 /* MAIN-CONTENT */
 .main-content{
+    position: relative;
+    padding-top: 148px;
+    padding-bottom: 140px;
     flex-grow: 1;
 }
 
@@ -128,4 +135,91 @@ img{
     width: 111px;
     height: 28px;
     object-fit: cover;
+}
+
+
+/* HERO */
+.hero__container {
+    display: flex;
+}
+
+.hero__info {
+    max-width: 457px;
+    margin-right: 282px;
+}
+
+.hero__heading {
+    margin-top: 0;
+    margin-bottom: 29px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 71px;
+    color: var(--title-color);
+}
+
+.hero__text {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.hero__link {
+    padding: 19px 32px 16px;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    border-radius: 31.5px;
+    transition: background-image .3s ease, opacity .3s ease;
+}
+
+.hero__link:hover {
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+.hero__link:active {
+    opacity: 0.6;
+}
+
+.hero__img {
+    margin-top: -85px;
+    width: 317px;
+    height: 560px;
+    object-fit: cover;
+}
+
+.card-2 {
+    position: absolute;
+    top: 166px;
+    right: 101px;
+    padding: 20px 57px 20px 24px;
+    background-color: #fff;
+    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    border-radius: 15px;
+}
+
+.card-1 {
+    position: absolute;
+    top: 405px;
+    right: 457px;
+    padding: 20px 72px 20px 24px;
+    background-color: #fff;
+    box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    border-radius: 15px;
+}
+
+.card__text {
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.card__price {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--title-color);
 }
