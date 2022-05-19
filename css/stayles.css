@@ -322,6 +322,11 @@ img{
     color: var(--title-color);
 }
 
+.index-features-info__texts {
+    margin-top: 0;
+    margin-bottom: 56px;
+}
+
 .index-features-info__text {
     margin-top: 0;
     margin-bottom: 24px;
