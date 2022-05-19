@@ -43,6 +43,11 @@ html{
     scroll-behavior: smooth;
 }
 
+*:focus {
+    outline: 2px dashed var(--link-color);
+    outline-offset: 3px;
+}
+
 *,
 *::before,
 *::after {
@@ -102,7 +107,6 @@ img{
 .main-content{
     position: relative;
     padding-top: 148px;
-    padding-bottom: 140px;
     flex-grow: 1;
 }
 
@@ -233,6 +237,7 @@ img{
 /* INDEX-FEATURES */
 .index-features {
     background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    padding-bottom: 60px;
 }
 
 .index-features__list {
